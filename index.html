@@ -1,262 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rajan Kumar | Premium Portfolio</title>
-
-    <!-- Tailwind CSS CDN (required) -->
     <script src="https://cdn.tailwindcss.com"></script>
-
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body class="bg-black text-white overflow-x-hidden">
-    <!-- Sounds (required paths) -->
+</head>
+<body class="bg-black text-white overflow-hidden">
+
     <audio id="audioIntro" preload="auto" src="sounds/intro.mp3"></audio>
     <audio id="audioClick" preload="auto" src="sounds/click.wav"></audio>
     <audio id="audioPop" preload="auto" src="sounds/pop-click.wav"></audio>
 
     <main class="min-h-screen relative">
-      <!-- Premium neon background (decorative) -->
-      <div class="fx-bg" aria-hidden="true">
-        <div class="fx-orb fx-orb--blue"></div>
-        <div class="fx-orb fx-orb--purple"></div>
-        <div class="fx-orb fx-orb--cyan"></div>
-        <div class="fx-grid"></div>
-        <div class="fx-noise"></div>
-        <div class="fx-vignette"></div>
-      </div>
-
-      <!-- Welcome Screen (required) -->
-      <section
-        id="screen-welcome"
-        class="screen screen--active min-h-screen flex items-center justify-center select-none"
-        aria-label="Welcome screen"
-      >
-        <div class="text-center relative px-6">
-          <div class="welcome-ring" aria-hidden="true"></div>
-          <div class="welcome-ring welcome-ring--2" aria-hidden="true"></div>
-          <div class="welcome-ring welcome-ring--3" aria-hidden="true"></div>
-
-          <div class="welcome-title text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-[0.35em]">
-            WELCOME
-          </div>
-          <div class="mt-6 text-sm text-white/60">
-            Tap / click once to enable sound
-          </div>
+        <div class="fx-bg">
+            <div class="fx-orb fx-orb--blue"></div>
+            <div class="fx-orb fx-orb--purple"></div>
+            <div class="fx-orb fx-orb--cyan"></div>
+            <div class="fx-grid"></div>
+            <div class="fx-noise"></div>
         </div>
-      </section>
 
-      <!-- Intro Screen (required) -->
-      <section
-        id="screen-intro"
-        class="screen min-h-screen flex items-center justify-center px-6"
-        aria-label="Intro screen"
-      >
-        <div class="w-full max-w-5xl">
-          <div class="intro-panel">
-            <div class="intro-panel__top">
-              <div class="text-xs tracking-[0.35em] text-white/60">
-                PREMIUM PORTFOLIO
-              </div>
-              <button
-                id="btn-skip"
-                class="neon-btn px-4 py-2 rounded-lg text-sm font-semibold"
-                data-sound="click"
-                type="button"
-              >
-                Skip
-              </button>
+        <section id="screen-welcome" class="screen screen--active min-h-screen flex items-center justify-center">
+            <div class="text-center relative px-6">
+                <div class="welcome-title text-5xl md:text-7xl font-extrabold tracking-[0.3em] uppercase">
+                    Welcome
+                </div>
             </div>
+        </section>
 
-            <div class="intro-split">
-              <div class="intro-left">
-                <div class="badge-row">
-                  <span class="badge">Neon</span>
-                  <span class="badge">Brand</span>
-                  <span class="badge">Premium</span>
-                </div>
-
-                <h1 class="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05]">
-                  <span id="typingText" class="typing-caret"></span>
-                </h1>
-
-                <p class="mt-5 text-white/70 text-lg leading-relaxed max-w-xl">
-                  High-end visuals, clean layout, and premium neon interactions—built for a modern designer portfolio.
-                </p>
-
-                <div class="mt-8 flex flex-wrap gap-3">
-                  <button
-                    id="btn-view-work"
-                    class="neon-btn px-7 py-3 rounded-xl font-semibold"
-                    data-sound="click"
-                    type="button"
-                  >
-                    View My Work
-                  </button>
-
-                  <a class="icon-pill neon-icon" href="#" data-sound="click">Email</a>
-                  <a class="icon-pill neon-icon" href="#" data-sound="click">WhatsApp</a>
-                  <a class="icon-pill neon-icon" href="#" data-sound="click">LinkedIn</a>
-                  <a class="icon-pill neon-icon" href="#" data-sound="click">Behance</a>
-                  <a class="icon-pill neon-icon" href="#" data-sound="click">Instagram</a>
-                </div>
-              </div>
-
-              <div class="intro-right" aria-hidden="true">
-                <div class="holo-card">
-                  <div class="holo-card__shine"></div>
-                  <div class="holo-card__inner">
-                    <div class="holo-title">RAJAN KUMAR</div>
-                    <div class="holo-sub">Graphic Designer • Video Editor • UI/UX</div>
-                    <div class="holo-metrics">
-                      <div class="metric">
-                        <div class="metric__k">Glow</div>
-                        <div class="metric__v">Neon</div>
-                      </div>
-                      <div class="metric">
-                        <div class="metric__k">Feel</div>
-                        <div class="metric__v">Premium</div>
-                      </div>
-                      <div class="metric">
-                        <div class="metric__k">Focus</div>
-                        <div class="metric__v">Design</div>
-                      </div>
+        <section id="screen-intro" class="screen min-h-screen flex items-center justify-center px-6">
+            <div class="w-full max-w-4xl">
+                <div class="intro-panel backdrop-blur-md">
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="text-xs text-blue-400 font-mono tracking-widest">SYSTEM_INITIALIZED</div>
+                        <button id="btn-skip" class="neon-btn px-4 py-1 rounded-md text-sm">Skip</button>
                     </div>
-                    <div class="holo-line"></div>
-                    <div class="holo-foot">Press “View My Work” to continue</div>
-                  </div>
+                    <h1 class="text-4xl md:text-6xl font-bold min-h-[80px]">
+                        <span id="typingText"></span><span class="typing-caret"></span>
+                    </h1>
+                    <div class="mt-10">
+                        <button id="btn-view-work" class="neon-btn px-8 py-3 rounded-xl font-bold">View My Work</button>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- Home Page (My Work) (required) -->
-      <section
-        id="screen-home"
-        class="screen min-h-screen px-6 py-12"
-        aria-label="Home screen"
-      >
-        <header class="max-w-6xl mx-auto">
-          <div class="home-hero">
-            <div>
-              <div class="text-xs tracking-[0.35em] text-white/60">MY WORK</div>
-              <h2 class="mt-3 text-4xl sm:text-5xl font-extrabold leading-[1.05]">
-                Rajan Kumar
-              </h2>
-              <p class="mt-3 text-white/70 text-lg max-w-2xl">
-                Hover the cards for purple glow. Buttons and gallery clicks use blue neon + click sound.
-              </p>
+        <section id="screen-home" class="screen min-h-screen px-6 py-16 overflow-y-auto">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold mb-10 border-l-4 border-blue-500 pl-4">My Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="work-card group" data-sound="pop">
+                        <h3 class="text-xl font-bold text-blue-400">JanSetu AI</h3>
+                        <p class="text-sm text-gray-400 mt-2">Public Safety & UI/UX App</p>
+                    </div>
+                    <div class="work-card group" data-sound="pop">
+                        <h3 class="text-xl font-bold text-purple-400">CorelDRAW</h3>
+                        <p class="text-sm text-gray-400 mt-2">Premium Print Media</p>
+                    </div>
+                    <div class="work-card group" data-sound="pop">
+                        <h3 class="text-xl font-bold text-cyan-400">Photoshop</h3>
+                        <p class="text-sm text-gray-400 mt-2">Digital Manipulation</p>
+                    </div>
+                    <div class="work-card work-card--soon">Video Editing (Soon)</div>
+                    <div class="work-card work-card--soon">Motion Graphics (Soon)</div>
+                    <div class="work-card work-card--soon">3D Animation (Soon)</div>
+                </div>
             </div>
-
-            <button
-              id="btn-replay"
-              class="neon-btn px-4 py-2 rounded-lg text-sm font-semibold"
-              data-sound="click"
-              type="button"
-            >
-              Replay Intro
-            </button>
-          </div>
-        </header>
-
-        <div class="max-w-6xl mx-auto mt-10">
-          <!-- Row 1 (4 Boxes): CorelDRAW, Photoshop, Illustrator, Client Work -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <button class="work-card" type="button" data-sound="pop">
-              <div class="work-card__icon neon-icon" aria-hidden="true"><span class="work-card__glyph">⬢</span></div>
-              <div class="work-card__title">CorelDRAW</div>
-              <div class="work-card__meta">Branding • Print</div>
-            </button>
-
-            <button class="work-card" type="button" data-sound="pop">
-              <div class="work-card__icon neon-icon" aria-hidden="true"><span class="work-card__glyph">◼</span></div>
-              <div class="work-card__title">Photoshop</div>
-              <div class="work-card__meta">Editing • Posters</div>
-            </button>
-
-            <button class="work-card" type="button" data-sound="pop">
-              <div class="work-card__icon neon-icon" aria-hidden="true"><span class="work-card__glyph">△</span></div>
-              <div class="work-card__title">Illustrator</div>
-              <div class="work-card__meta">Vector • Logos</div>
-            </button>
-
-            <button class="work-card" type="button" data-sound="pop">
-              <div class="work-card__icon neon-icon" aria-hidden="true"><span class="work-card__glyph">✦</span></div>
-              <div class="work-card__title">Client Work</div>
-              <div class="work-card__meta">Real Projects</div>
-            </button>
-          </div>
-
-          <!-- Row 2 (2 Boxes): Video Editing, AI Work (Coming Soon - low opacity) -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-5">
-            <button class="work-card" type="button" data-sound="pop">
-              <div class="work-card__icon neon-icon" aria-hidden="true"><span class="work-card__glyph">▶</span></div>
-              <div class="work-card__title">Video Editing</div>
-              <div class="work-card__meta">Reels • Edits • Motion</div>
-            </button>
-
-            <button
-              class="work-card work-card--soon"
-              type="button"
-              data-soon="true"
-              aria-disabled="true"
-              data-sound="click"
-            >
-              <div class="work-card__icon neon-icon" aria-hidden="true"><span class="work-card__glyph">◎</span></div>
-              <div class="work-card__title">AI Work</div>
-              <div class="work-card__meta">Coming Soon</div>
-            </button>
-          </div>
-
-          <!-- Gallery (required) -->
-          <section class="mt-12" aria-label="Gallery">
-            <div class="flex items-end justify-between gap-4">
-              <div>
-                <div class="text-xs tracking-[0.35em] text-white/60">GALLERY</div>
-                <h3 class="mt-3 text-2xl sm:text-3xl font-extrabold">Image Grid</h3>
-                <p class="mt-2 text-white/70">
-                  Click image → full-screen popup.
-                </p>
-              </div>
-              <div class="text-sm text-white/60">Replace placeholders with your real work</div>
-            </div>
-
-            <div
-              id="galleryGrid"
-              class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"
-            >
-              <button class="gallery-tile" type="button" data-sound="click" data-full="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'%3E%3Cdefs%3E%3CradialGradient id='g' cx='35%25' cy='40%25'%3E%3Cstop offset='0%25' stop-color='%238B5CF6'/%3E%3Cstop offset='100%25' stop-color='%23000000'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23g)'/%3E%3Ctext x='50%25' y='52%25' fill='white' font-size='54' font-family='Arial' text-anchor='middle'%3ECorelDRAW%3C/text%3E%3C/svg%3E">
-                <img alt="Gallery 1" class="w-full h-full object-cover" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='800'%3E%3Cdefs%3E%3CradialGradient id='g' cx='35%25' cy='40%25'%3E%3Cstop offset='0%25' stop-color='%238B5CF6'/%3E%3Cstop offset='100%25' stop-color='%23000000'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23g)'/%3E%3Ctext x='50%25' y='52%25' fill='white' font-size='40' font-family='Arial' text-anchor='middle'%3E1%3C/text%3E%3C/svg%3E" />
-              </button>
-
-              <button class="gallery-tile" type="button" data-sound="click" data-full="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop offset='0%25' stop-color='%233B82F6'/%3E%3Cstop offset='100%25' stop-color='%23000000'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23g)'/%3E%3Ctext x='50%25' y='52%25' fill='white' font-size='54' font-family='Arial' text-anchor='middle'%3EPhotoshop%3C/text%3E%3C/svg%3E">
-                <img alt="Gallery 2" class="w-full h-full object-cover" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='800'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop offset='0%25' stop-color='%233B82F6'/%3E%3Cstop offset='100%25' stop-color='%23000000'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23g)'/%3E%3Ctext x='50%25' y='52%25' fill='white' font-size='40' font-family='Arial' text-anchor='middle'%3E2%3C/text%3E%3C/svg%3E" />
-              </button>
-
-              <button class="gallery-tile" type="button" data-sound="click" data-full="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'%3E%3Cdefs%3E%3CradialGradient id='g' cx='65%25' cy='45%25'%3E%3Cstop offset='0%25' stop-color='%2300FFFF'/%3E%3Cstop offset='100%25' stop-color='%23000000'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23g)'/%3E%3Ctext x='50%25' y='52%25' fill='white' font-size='54' font-family='Arial' text-anchor='middle'%3EIllustrator%3C/text%3E%3C/svg%3E">
-                <img alt="Gallery 3" class="w-full h-full object-cover" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='800'%3E%3Cdefs%3E%3CradialGradient id='g' cx='65%25' cy='45%25'%3E%3Cstop offset='0%25' stop-color='%2300FFFF'/%3E%3Cstop offset='100%25' stop-color='%23000000'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23g)'/%3E%3Ctext x='50%25' y='52%25' fill='white' font-size='40' font-family='Arial' text-anchor='middle'%3E3%3C/text%3E%3C/svg%3E" />
-              </button>
-
-              <button class="gallery-tile" type="button" data-sound="click" data-full="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop offset='0%25' stop-color='%238B5CF6'/%3E%3Cstop offset='50%25' stop-color='%233B82F6'/%3E%3Cstop offset='100%25' stop-color='%23000000'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23g)'/%3E%3Ctext x='50%25' y='52%25' fill='white' font-size='54' font-family='Arial' text-anchor='middle'%3EClient Work%3C/text%3E%3C/svg%3E">
-                <img alt="Gallery 4" class="w-full h-full object-cover" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='800'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop offset='0%25' stop-color='%238B5CF6'/%3E%3Cstop offset='50%25' stop-color='%233B82F6'/%3E%3Cstop offset='100%25' stop-color='%23000000'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23g)'/%3E%3Ctext x='50%25' y='52%25' fill='white' font-size='40' font-family='Arial' text-anchor='middle'%3E4%3C/text%3E%3C/svg%3E" />
-              </button>
-            </div>
-          </section>
-        </div>
-      </section>
+        </section>
     </main>
 
-    <!-- Full-screen popup (required) -->
-    <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-label="Image preview">
-      <button id="modalClose" class="modal__close neon-btn" type="button" data-sound="click">
-        Close
-      </button>
-      <img id="modalImg" class="modal__img" alt="Full screen preview" />
+    <div id="modal" class="modal hidden backdrop-blur-xl">
+        <button id="modalClose" class="absolute top-10 right-10 neon-btn px-4 py-2 rounded">Close</button>
+        <img id="modalImg" src="" alt="Work Detail" />
     </div>
 
-    <script defer src="script.js"></script>
-  </body>
-</html><script src="script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
